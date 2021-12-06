@@ -1,4 +1,4 @@
-# Create a server with vanill node js :
+# Create a server with vanilla node js :
 
 ## Create a server :
 
