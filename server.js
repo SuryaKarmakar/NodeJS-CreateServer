@@ -1,22 +1,35 @@
 const http = require("http");
 
 const PORT = 8000;
+const HOST = "127.1.1.1";
 
-// Create a server
-const server = http.createServer((req, res) => {
-  console.log(`Server is up on port ${PORT}`);
-});
+// Ex 1:
+// const server = http.createServer((req, res) => {
+//   res.write("<h1>Welcome to vanilla node server</h1>");
+//   res.end();
+// });
 
-// Create a server
+// Ex 2:
 // const serverListener = (req, res) => {
-//   console.log(`Server is up on port ${PORT}`);
+//   res.write("<h1>Welcome to vanilla node server</h1>");
+//   res.end();
 // };
 // const server = http.createServer(serverListener);
 
-// Create a server with requestListener
-// const server = http.createServer();
-// server.on("request", (req, res) => {
-//   console.log(`Server is up on port ${PORT}`);
+// Ex 3:
+const server = http.createServer();
+
+server.on("request", (req, res) => {
+  res.write("<h1>Welcome to vanilla node server</h1>");
+  res.end();
+});
+
+// listen defult domain address (localhost)
+// server.listen(PORT, () => {
+//   console.log(`Server is running on http://localhost:${PORT}`);
 // });
 
-server.listen(PORT);
+// listen specific domain address (public or localhost)
+server.listen(PORT, HOST, () => {
+  console.log(`Server is running on http://${HOST}:${PORT}`);
+});
