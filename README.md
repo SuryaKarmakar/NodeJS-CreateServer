@@ -1,5 +1,12 @@
 # Create a server with vanilla node js :
 
+## http.createServer([options][, requestlistener])
+
+- options <Object>
+- requestListener <Function>
+
+The requestListener is a function which is automatically added to the 'request' event.
+
 ## Create a server :
 
 - **Example 1 :**
@@ -14,11 +21,11 @@ const server = http.createServer((req, res) => {
 - **Example 2 :**
 
 ```js
-const serverListener = (req, res) => {
+const requestListener = (req, res) => {
   res.write("<h1>Welcome to vanilla node server</h1>");
   res.end();
 };
-const server = http.createServer(serverListener);
+const server = http.createServer(requestListener);
 ```
 
 - **Example 3 :**

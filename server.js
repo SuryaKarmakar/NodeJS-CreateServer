@@ -10,19 +10,19 @@ const HOST = "127.1.1.1";
 // });
 
 // Ex 2:
-// const serverListener = (req, res) => {
-//   res.write("<h1>Welcome to vanilla node server</h1>");
-//   res.end();
-// };
-// const server = http.createServer(serverListener);
-
-// Ex 3:
-const server = http.createServer();
-
-server.on("request", (req, res) => {
+const requestListener = (req, res) => {
   res.write("<h1>Welcome to vanilla node server</h1>");
   res.end();
-});
+};
+const server = http.createServer(requestListener);
+
+// Ex 3:
+// const server = http.createServer();
+
+// server.on("request", (req, res) => {
+//   res.write("<h1>Welcome to vanilla node server</h1>");
+//   res.end();
+// });
 
 // listen defult domain address (localhost)
 // server.listen(PORT, () => {
