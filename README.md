@@ -2,8 +2,8 @@
 
 ## http.createServer([options][, requestlistener])
 
-- options <Object>
-- requestListener <Function>
+- options => Object
+- requestListener => Function
 
 The requestListener is a function which is automatically added to the 'request' event.
 
