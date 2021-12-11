@@ -1,5 +1,7 @@
 # Create a server with vanilla node js :
 
+To create the server, you need to call the createServer method from the HTTP module. i.e, http.createServer.
+
 ## http.createServer([options][, requestlistener])
 
 - options => Object
